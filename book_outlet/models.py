@@ -12,6 +12,9 @@ class Country(models.Model):
 
     def __str__(self):
         return f"{self.name}, {self.code}"
+    
+    class Meta:
+        verbose_name_plural = "Countries"
 
 
 class Address(models.Model):
@@ -22,7 +25,7 @@ class Address(models.Model):
     def __str__(self):
         return f"{self.street}, {self.postal_code}, {self.city}"
 
-    class Mrta:
+    class Meta:
         verbose_name_plural = "Address Entries"
         
 
